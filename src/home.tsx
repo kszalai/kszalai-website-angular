@@ -7,21 +7,22 @@ export class Home extends React.Component {
     render() {
         return (
             <div className={'container-fluid'} style={{padding: '0px'}}>
-                <div className={'col-sm-6 col-xs-12'} id="leftCol">
+                <div className={'col-sm-6 col-xs-12'} id="leftCol"> 
                     <Card name="😁 About Me" desc="Everyone has a story to tell!" id="#about">
                         <div className={'container-fluid col-xs-12 text-left'}>
                             <p>
                                 Hello! My name is Kyle!<br /><br />
-                                Currently I'm in southeast Michigan, and during the week I make my way out to Detroit to work at Quicken Loans!<br /> 
-                                As a Software Engineer there, I'm a full stack developer currently doing front-end development on their products.<br /><br />
+                                Currently I'm in southeast Michigan, and during the week I make my way out to Detroit to work at Rocket Homes!<br /> 
+                                As a Software Engineer there, I'm a full stack developer currently doing Android development.<br /><br />
                                 I graduated with my Bachelor of Science degree in Computer Science from Eastern Michigan University!
                                 During my time at EMU, I did some pretty cool stuff! I worked for the campus Housing &amp; Residence Life program there as an RA. 
                                 I was also apart of Kick and Push Longboarding Club, made the dean's list 6 times, and graduated magna cum laude with a 3.74 cumulative GPA.<br /><br />
                                 I've always been very passionate about computers, and I love developing software!
                                 I find it really interesting to see how things work together through the entire stack! 
-                                I primarily learned Java while at EMU, and I began teaching myself C# and front-end during my free time prior to graduation.
+                                I primarily learned Java while at EMU, and I began teaching myself C# and web front-end during my free time prior to graduation.
                                 I've since gained lots of experience with TypeScript and Angular, as well as .NET Core and WPF/UWP Development.
-                                I've also had some experience developing for Android and iOS, and those were some of my favorite projects while at EMU! 
+                                I've also had some experience developing for Android and iOS, and those were some of my favorite projects while at EMU!
+                                Since joining up with the Android team at Rocket Homes, this is what I'm more familiar with in terms of mobile development.  
                                 Additionally, I also have some experience developing video games in Unity.<br /><br />
                                 If you have any questions, please feel free to email me!
                             </p>
@@ -29,9 +30,15 @@ export class Home extends React.Component {
                     </Card>
                     <Card name="💻 Work History" desc="Oh man, look at the places I've been!" id="#workHist" titleAlign="center">
                         <div className={'text-left'}>
-                            <WorkHistory position="Software Engineer" company="Quicken Loans" location="Detroit, MI" startTime="August 2019">
+                            <WorkHistory position="Software Engineer" company="Rocket Homes" location="Detroit, MI" startTime="August 2019">
                                 <WorkDetail>
-                                    Working on Rocket HQ web application utilizing Angular. Added library to enable gestures on the web! Conducting code reviews.
+                                    Working on Rocket Homes Android app utilizing Kotlin, Android Jetpack components.
+                                    Integrated Google Play In-App Update and Reviews APIs into app.
+                                    Converted dependency injection for app from Dagger to Hilt.
+                                    Conducting code reviews.
+                                </WorkDetail>
+                                <WorkDetail>
+                                    Workied on Rocket HQ web application utilizing Angular. Added library to enable gestures on the web!
                                     Wrote unit tests in Jasmine for various components, services, pipes, and directives for application
                                 </WorkDetail>
                                 <WorkDetail>
@@ -40,20 +47,25 @@ export class Home extends React.Component {
                                     repository containing the code open for others to contribute to.
                                 </WorkDetail>
                                 <WorkDetail>
-                                    Developed an Android app with Kotlin implementing the single activity multi fragment architecture using Android Jetpack
+                                    Developed an internal Android app with Kotlin implementing the single activity multi fragment architecture using Android Jetpack
                                     components (Navigation, ViewModels, DataBinding, CameraX, etc.) to create a system for checking out mobile devices for our team.
                                     Created backend with Firebase using Cloud Firestore, Cloud Functions, and Authentication for storing data for the app.
+                                    Created unit tests using Mockito.
                                     <br />
                                     <br />
                                     <b><u>Technologies Used</u></b>
                                     <br />
                                     <div className={'icon-container'}>
+                                        <i className={'devicon-android-plain colored workHistIcon'}></i>
+                                        <i className={'devicon-kotlin-plain colored workHistIcon'}></i>
+                                        <i className={'devicon-gradle-plain colored workHistIcon'}></i>
+                                        <i className={'devicon-google-plain colored workHistIcon'}></i>
                                         <i className={'devicon-angularjs-plain colored workHistIcon'}></i>
                                         <i className={'devicon-typescript-plain colored workHistIcon'}></i>
+                                        <i className={'devicon-jasmine-plain colored workHistIcon'}></i>
                                         <i className={'devicon-sass-plain colored workHistIcon'}></i>
                                         <i className={'devicon-html5-plain colored workHistIcon'}></i>
                                         <i className={'devicon-bootstrap-plain colored workHistIcon'}></i>
-                                        <i className={'devicon-android-plain colored workHistIcon'}></i>
                                         <i className={'devicon-nodejs-plain colored workHistIcon'}></i>
                                         <i className={'devicon-github-plain colored workHistIcon'}></i>
                                     </div>
@@ -149,6 +161,7 @@ export class Home extends React.Component {
                             <br />
                             <h4>Languages</h4>
                             <div className={'icon-container'}>
+                                <i className={'devicon-kotlin-plain-wordmark colored skillIcon'}></i>
                                 <i className={'devicon-java-plain-wordmark colored skillIcon'} ></i>
                                 <i className={'devicon-csharp-plain colored skillIcon'} ></i>
                                 <i className={'devicon-python-plain-wordmark colored skillIcon'} ></i>
@@ -162,7 +175,7 @@ export class Home extends React.Component {
                                 <i className={'devicon-sass-plain colored skillIcon'} ></i>
                             </div>
                             <br />
-                            <h4>Frameworks</h4>
+                            <h4>Web Frameworks</h4>
                             <div className={'icon-container'}>
                                 <i className={'devicon-angularjs-plain colored skillIcon'}></i>
                                 <i className={'devicon-react-plain colored skillIcon'}></i>
@@ -171,13 +184,20 @@ export class Home extends React.Component {
                                 <i className={'devicon-dotnet-plain-wordmark colored skillIcon'}></i>
                             </div>
                             <br />
+                            <h4>Testing</h4>
+                            <div className={'icon-container'}>
+                                <i className={'devicon-jasmine-plain colored skillIcon'}></i>
+                                <i className={'devicon-android-plain colored skillIcon'}></i>
+                            </div>
+                            <br />
                             <h4>Source Control/Tools</h4>
                             <div className={'icon-container'}>
                                 <i className={'devicon-git-plain-wordmark colored skillIcon'}></i>
-                                <i className={'devicon-github-plain-wordmark colored skillIcon'}></i>
-                                <i className={'devicon-gitlab-plain-wordmark colored skillIcon'}></i>
+                                <i className={'devicon-github-plain colored skillIcon'}></i>
+                                <i className={'devicon-gitlab-plain colored skillIcon'}></i>
                                 <i className={'devicon-sourcetree-plain colored skillIcon'} data-toggle="tooltip" data-trigger="hover" data-placement="bottom" title="Subversion"></i>
                             </div>
+                            <br />
                             <h4>Database</h4>
                             <div className={'icon-container'}>
                                 <i className={'devicon-mysql-plain-wordmark colored skillIcon'}></i>
@@ -185,9 +205,10 @@ export class Home extends React.Component {
                             </div>
                             <br />
                             <br />
-                            <p>
-                                I have a lot of experience in programming in Java, which makes it my primary choice of language. It's what EMU used for their curriculum, which helped
-                                introduce me to a lot of the core concepts and ideas of computer science. Learning Java first also helped me learn how to develop Android applications!
+                            <p>                    
+                                I have a lot of experience in programming in Java. It's what EMU used for their curriculum, which helped introduce me to a lot of the core concepts and 
+                                ideas of computer science. Learning Java first also helped me learn how to develop Android applications and still helps me today as I write in Kotlin!
+                                <br />
                                 <br />
                                 I've gotten lot of experience with C#, as it is incredibly similar to Java. Developing REST APIs for the products at Daifuku, we ended up using .NET Core,
                                 and .NET Standard for some libraries. For my software capstone at EMU, I worked a team of classmates to create a .NET Framework MVC website for a client
@@ -195,10 +216,19 @@ export class Home extends React.Component {
                                 I got an introduction to C# for Windows Forms Apps, and through my time at Daifuku, I've got even more experience with WPF apps. I ended up architecting
                                 a handful of MVVM WPF apps which help set up a few JSON files for our web apps, and perform a couple of quality checking processes.
                                 <br />
+                                <br />
                                 Daifuku also introduced me to TypeScript, and I got to architect 2 progressive web apps utilizing Angular. While creating these PWAs, I did a lot of research
                                 on web development, modern features of the web, and Angular! I took it upon myself to take what I was working on and make the apps into PWAs, and implemented
                                 features that are very beneficial to the products I was developing. This introduced me Service Workers, web app manifests, Web Workers, and other PWA concepts.
                                 I started teaching myself JavaScript while still at EMU, and this continued into my position at Daifuku where I work on the entire stack.
+                                <br />
+                                <br />
+                                Rocket HQ helped me further improve my web development skills as I applied what I knew about Angular to their web app, and I also picked up how Jasmine works 
+                                for writing unit tests for the web app. When Rocket HQ got aquired by Rocket Homes, this allowed me to move over to the Android team where I got to apply my past 
+                                knowledge about Android development and at the same time learn about and implement best practices for Android development. I've learned about various Jetpack
+                                components, Google Play APIs, and started writing Kotlin. I'm constantly exploring for new tools I can use for Android development in my job, and continue learning 
+                                everyday while I'm there!
+                                <br />
                                 <br />
                                 I think it's an important thing to keep learning whenever you have the opportunity to, and I enjoy learning about different Technologies and how to apply them!
                             </p>
