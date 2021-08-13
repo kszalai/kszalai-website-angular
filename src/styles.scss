@@ -1,7 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
-@import "~devicon/devicon-colors.css";
-@import "~devicon/devicon.css";
+@import "~devicon/devicon.min.css";
 @import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono");
 
 $primaryColor: #2162FF;
@@ -330,7 +329,7 @@ ul {
 @media (prefers-color-scheme: dark) {
     .devicon-apple-original, .devicon-apple-plain, .devicon-github-original-wordmark, .devicon-github-plain-wordmark, .devicon-github-original, .devicon-github-plain{
         &.colored {
-            color: #FFFFFF;
+            color: #FFFFFF !important;
         }
     }
 }
