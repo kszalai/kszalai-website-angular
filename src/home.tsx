@@ -51,6 +51,9 @@ export class Home extends React.Component {
                                     components (Navigation, ViewModels, DataBinding, CameraX, etc.) to create a system for checking out mobile devices for our team.
                                     Created backend with Firebase using Cloud Firestore, Cloud Functions, and Authentication for storing data for the app.
                                     Created unit tests using Mockito.
+                                </WorkDetail>
+                                <WorkDetail>
+                                    Revamped CI strategy with custom JavaScript GitHub Action to keep multiple branches in sync. Maintained clean repo, and streamlined processes using GitHub Actions.
                                     <br />
                                     <br />
                                     <b><u>Technologies Used</u></b>
