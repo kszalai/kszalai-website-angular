@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default navbar-fixed-top" data-spy="affix-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" (click)="onMenuOpen()" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <span class="navbar-brand">
+                <a href="http://github.com/kszalai" target="_blank" rel="noopener noreferrer" title="Check out my work on Github!" data-toggle="tooltip" data-trigger="hover" data-placement="bottom">
+                    <i class="fa fa-github fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/kyle-szalai-41649bb3" target="_blank" rel="noopener noreferrer" title="Connect with me on LinkedIn!" data-toggle="tooltip" data-trigger="hover" data-placement="bottom">
+                    <i class="fa fa-linkedin fa-2x"></i>
+                </a>
+            </span>
+        </div>
+        <div class="navbar-collapse collapse" [ngClass]="{ 'in': menuOpen }" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a routerLink="/"><i class="fa fa-home fa-fw"></i>&nbsp;</a></li>
+                <li><a href="#about"><i class="fa fa-info-circle fa-fw"></i>&nbsp;About Me</a></li>
+                <li><a href="#workhist"><i class="fa fa-briefcase fa-fw"></i>&nbsp;Work History</a></li>
+                <li><a href="#skills"><i class="fa fa-code fa-fw"></i>&nbsp;Tech Skills</a></li>
+                <li class="dropdown" [ngClass]="{ 'open': classMenuOpen }">
+                    <a href="#" (click)="toggleClassMenu()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;University Work<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a routerLink="471">Database Principles</a></li>
+                        <li><a routerLink="231">Internet Based Computing</a></li>
+                        <!-- <NavLink name="Past Classes" hrefLink="/pastClasses.html"></NavLink> -->
+                    </ul>
+                </li>
+                <li><a href="mailto:kyleszalai@gmail.com" ><i class="fa fa-envelope-o fa-fw"></i>&nbsp;Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
