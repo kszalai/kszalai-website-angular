@@ -326,10 +326,32 @@ ul {
     }
 }
 
+.devicon-kotlin-plain, .devicon-kotlin-plain-wordmark {
+    &.colored {
+        color: #7F52FF !important;
+    }
+}
+
+.devicon-google-plain {
+    &.colored {
+        color: #1A73E8 !important;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     .devicon-apple-original, .devicon-apple-plain, .devicon-github-original-wordmark, .devicon-github-plain-wordmark, .devicon-github-original, .devicon-github-plain{
         &.colored {
             color: #FFFFFF !important;
+        }
+    }
+    .devicon-gradle-plain {
+        &.colored {
+            color: #BAF2FF !important;
+        }
+    }
+    .devicon-kotlin-plain {
+        &.colored {
+            color: #7F52FF !important;
         }
     }
 }
