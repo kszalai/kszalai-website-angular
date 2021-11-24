@@ -22,4 +22,26 @@ describe('NavComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('onMenuOpen', () => {
+    it('should toggle menuOpen boolean', () => {
+      component.menuOpen = false;
+      expect(component.menuOpen).toBeFalsy();
+      component.onMenuOpen();
+      expect(component.menuOpen).toBeTruthy();
+      component.onMenuOpen();
+      expect(component.menuOpen).toBeFalsy();
+    });
+  });
+
+  describe('toggleClassMenu', () => {
+    it('should toggle classMenuOpen boolean', () => {
+      component.classMenuOpen = false;
+      expect(component.classMenuOpen).toBeFalsy();
+      component.toggleClassMenu();
+      expect(component.classMenuOpen).toBeTruthy();
+      component.toggleClassMenu();
+      expect(component.classMenuOpen).toBeFalsy();
+    });
+  });
 });
