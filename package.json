@@ -1,0 +1,22 @@
+{
+  "name": "kszalai-website-svelte",
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.1",
+    "@types/node": "^18.7.4",
+    "sass": "^1.54.4",
+    "svelte": "^3.49.0",
+    "vite": "^3.0.7"
+  },
+  "dependencies": {
+    "bootstrap": "^3.4.1",
+    "devicon": "^2.15.1",
+    "font-awesome": "^4.7.0"
+  }
+}
