@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     export let position;
     export let company;
     export let location;

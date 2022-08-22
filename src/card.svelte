@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     export let id = "";
     export let titleAlign = "\"-moz-initial\" | \"inherit\" | \"initial\" | \"revert\" | \"unset\" | \"center\" | \"end\" | \"justify\" | \"left\" | \"match-parent\" | \"right\" | \"start\" | undefined";
     export let name = "";

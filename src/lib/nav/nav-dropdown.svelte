@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     export let menuOpen = false;
     $: menuOpenClass = menuOpen ? "dropdown open" : "dropdown";
 

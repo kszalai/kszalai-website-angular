@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Card from "../../card.svelte";
     import WorkHistory from "../work/work-history.svelte";
     import WorkDetail from "../work/work-detail.svelte";

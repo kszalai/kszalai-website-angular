@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import NavLink from "./nav-link.svelte";
     import NavDropdown from "./nav-dropdown.svelte";
     import NavHeader from "./nav-header.svelte";

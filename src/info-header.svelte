@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import profilePic from './assets/profile_pic.jpg'
 </script>
 

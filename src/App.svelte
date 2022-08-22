@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Footer from './footer.svelte';
   import InfoHeader from './info-header.svelte';
   import Home from './lib/pages/home.svelte';
