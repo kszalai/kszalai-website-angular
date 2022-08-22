@@ -169,7 +169,6 @@
                     <i class="devicon-java-plain-wordmark colored skillIcon"></i>
                     <i class="devicon-csharp-plain colored skillIcon"></i>
                     <i class="devicon-python-plain-wordmark colored skillIcon"></i>
-                    <i class="devicon-swift-plain-wordmark colored skillIcon"></i>
                     <i class="devicon-c-plain colored skillIcon"></i>
                     <i class="devicon-typescript-plain colored skillIcon"></i>
                     <i class="devicon-javascript-plain colored skillIcon"></i>
