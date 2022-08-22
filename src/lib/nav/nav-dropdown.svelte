@@ -2,8 +2,8 @@
     export let menuOpen = false;
     $: menuOpenClass = menuOpen ? "dropdown open" : "dropdown";
 
-    export let iconClass;
-    export let name;
+    export let iconClass: string;
+    export let name: string;
 </script>
 
 <li class={menuOpenClass}>

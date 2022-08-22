@@ -6,9 +6,9 @@
   import DatabasePrinciples from './lib/pages/database-principles.svelte';
   import WebProgramming from './lib/pages/web-programming.svelte';
 
-  let currentPage = "home";
+  let currentPage: string = "home";
 
-  function onNavigate(route) {
+  function onNavigate(route: string): void {
     currentPage = route;
   }
 </script>

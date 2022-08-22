@@ -1,8 +1,8 @@
 <script lang="ts">
-    export let id = "";
-    export let titleAlign = "\"-moz-initial\" | \"inherit\" | \"initial\" | \"revert\" | \"unset\" | \"center\" | \"end\" | \"justify\" | \"left\" | \"match-parent\" | \"right\" | \"start\" | undefined";
-    export let name = "";
-    export let desc = null;
+    export let id: string = "";
+    export let titleAlign: string = "\"-moz-initial\" | \"inherit\" | \"initial\" | \"revert\" | \"unset\" | \"center\" | \"end\" | \"justify\" | \"left\" | \"match-parent\" | \"right\" | \"start\" | undefined";
+    export let name: string = "";
+    export let desc: string | null = null;
 </script>
 
 <div {id} class="col-xs-12 card" style="marginBottom: 16px">

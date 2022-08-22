@@ -10,30 +10,30 @@
     };
     $: menuOpenClass = menuOpen.main ? "navbar-collapse collapse in" : "navbar-collapse collapse";
 
-    function onMainMenuClick() {
+    function onMainMenuClick(): void {
         menuOpen.main = !menuOpen.main;
     }
 
-    function onHomeClick() {
+    function onHomeClick(): void {
         closeEntireMenu();
         onNavigate("home");
     }
 
-    function onUniversityWorkMenuClick() {
+    function onUniversityWorkMenuClick(): void {
         menuOpen.universityWork = !menuOpen.universityWork;
     }
 
-    function onUniversityWorkLinkClick(route) {
+    function onUniversityWorkLinkClick(route: string): void {
         closeEntireMenu();
         onNavigate(route);
     }
 
-    function closeEntireMenu() {
+    function closeEntireMenu(): void {
         menuOpen.main = false;
         menuOpen.universityWork = false;
     }
 
-    export let onNavigate;
+    export let onNavigate: Function;
 </script>
 
 <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix-top">

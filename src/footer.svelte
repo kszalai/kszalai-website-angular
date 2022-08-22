@@ -1,5 +1,5 @@
 <script lang="ts">
-    let currentYear = new Date().getFullYear();
+    let currentYear: number = new Date().getFullYear();
 </script>
 
 <div class="container footer card">
