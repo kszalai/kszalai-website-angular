@@ -1,6 +1,9 @@
 name: Tag
 
-on: [push]
+on:
+  push:
+    tags:
+      - '*.*.*'
 
 jobs:
   build_app:
