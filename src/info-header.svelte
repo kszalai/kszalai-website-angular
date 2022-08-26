@@ -1,5 +1,5 @@
 <script lang="ts">
-    import profilePic from './assets/profile_pic.jpg'
+    import profilePic from './assets/profile_pic.jpg';
 </script>
 
 <div class="container">
