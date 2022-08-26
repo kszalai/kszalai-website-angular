@@ -1,0 +1,38 @@
+name: Tag
+
+on:
+  push:
+    tags:
+      - '*.*.*'
+
+jobs:
+  build_app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      
+      - name: Install node_modules
+        shell: bash
+        run: npm install
+
+      # - name: Run unit tests 🧪
+      #   if: success()
+      #   run: npm run test --configuration=ci --code-coverage
+  
+      - name: Build app 🏗
+        if: success()
+        shell: bash
+        run: npm run build
+
+      - name: Upload artifacts 👆
+        uses: actions/upload-artifact@v3
+        if: success()
+        with:
+          name: kszalai-website
+          path: dist
