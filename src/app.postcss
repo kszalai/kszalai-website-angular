@@ -11,105 +11,126 @@ $accentColorLight: #B0FF57;
 $accentColorDark: #32CB00;
 $textColorOnPrimary: #FFFFFF;
 $textColorOnAccent: #000000;
-$primaryTextColor_dark: rgba(255,255,255,1.0);
-$primaryTextColor_light: rgba(0,0,0,0.87);
-$secondaryTextColor_dark: rgba(255,255,255,0.7);
-$secondaryTextColor_light: rgba(0,0,0,0.54);
-$hintTextColor_dark: rgba(255,255,255,0.5);
-$hintTextColor_light: rgba(0,0,0,0.38);
+$primaryTextColor_dark: rgba(255, 255, 255, 1.0);
+$primaryTextColor_light: rgba(0, 0, 0, 0.87);
+$secondaryTextColor_dark: rgba(255, 255, 255, 0.7);
+$secondaryTextColor_light: rgba(0, 0, 0, 0.54);
+$hintTextColor_dark: rgba(255, 255, 255, 0.5);
+$hintTextColor_light: rgba(0, 0, 0, 0.38);
 $background-color: #FAFAFA;
 $background-color-dark: #121212;
 $surface-color-dark: #1F1F1F;
 $theme-color: #212121;
 $theme-color_dark: #000000;
-$font-stack: Roboto, Arial, Helvetica, sans-serif;
+$font-stack: "Roboto", Arial, Helvetica, sans-serif;
 
 body {
     background: $background-color;
     font-family: $font-stack;
-    color:#000000;
+    color: #000000;
     padding-top: 70px;
+
     @media(prefers-color-scheme: dark) {
         background: $background-color-dark;
         color: #FFFFFF;
     }
 }
 
-h1  {
+h1 {
     font-family: $font-stack;
-    small{
-        color: $secondaryTextColor_light;			
+
+    small {
+        color: $secondaryTextColor_light;
     }
 }
 
-h2.a    {
+h2.a {
     font-family: $font-stack;
 }
 
 /*Links*/
 a {
-    &:link { /*Unvisited Link*/
-        color:#2196f3;
-        background-color:transparent;
-        text-decoration:none;
+    &:link {
+        /*Unvisited Link*/
+        color: #2196f3;
+        background-color: transparent;
+        text-decoration: none;
     }
-    &:visited { /*Visited Link*/
-        color:#0a6ebd;
-        background-color:transparent;
-        text-decoration:none;
+
+    &:visited {
+        /*Visited Link*/
+        color: #0a6ebd;
+        background-color: transparent;
+        text-decoration: none;
     }
-    &:hover	{ /*Mouse over link*/
-        color:#0a6ebd; 
-        background-color:transparent; 
-        text-decoration:underline;
+
+    &:hover {
+        /*Mouse over link*/
+        color: #0a6ebd;
+        background-color: transparent;
+        text-decoration: underline;
     }
-    &:active { /*Selected Link*/
-        color:#0a6ebd;
-        background-color:transparent; 
-        text-decoration:underline;
+
+    &:active {
+        /*Selected Link*/
+        color: #0a6ebd;
+        background-color: transparent;
+        text-decoration: underline;
     }
 }
 
-.navbar	{	
+.navbar {
     border-radius: 0px 0px 0px 0px;
 }
 
-.navbar-default	{
-    background-color:$primaryColor;
+.navbar-default {
+    background-color: $primaryColor;
     border: none;
     border-radius: 0px 0px 0px 0px;
-    -webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
-    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+
     .navbar-nav {
         >li {
             >a {
                 color: $textColorOnPrimary;
                 -webkit-transition: color 0.275s, background-color 0.275s;
                 transition: color 0.275s, background-color 0.275s;
-                &:focus, &:hover{
+
+                &:focus,
+                &:hover {
                     color: $textColorOnPrimary;
                     background-color: $primaryColorDark;
                 }
             }
         }
-        >.active, >.open {
-            >a, >a:focus, >a:hover {
+
+        >.active,
+        >.open {
+
+            >a,
+            >a:focus,
+            >a:hover {
                 color: $textColorOnPrimary;
                 background-color: $primaryColorDark;
             }
         }
     }
+
     .navbar-collapse {
         border-color: $primaryColor;
     }
+
     .navbar-toggle {
         border: none;
+
         .icon-bar {
             background: #ffffff;
         }
     }
 
-    & .navbar-toggle:focus, & .navbar-toggle:hover {
+    & .navbar-toggle:focus,
+    & .navbar-toggle:hover {
         background-color: $primaryColorDark;
     }
 
@@ -120,14 +141,17 @@ a {
     }
 
     @media (prefers-color-scheme: dark) {
-        .dropdown-menu { 
+        .dropdown-menu {
             background-color: $surface-color-dark;
+
             >li {
                 >a {
                     color: #FFFFFF;
+
                     &:hover {
                         background: #181818;
                     }
+
                     &:focus {
                         background: #000000;
                     }
@@ -137,7 +161,7 @@ a {
     }
 }
 
-.navbar-brand	{
+.navbar-brand {
     padding: 8px;
 
     a>i {
@@ -149,31 +173,36 @@ a {
 .card {
     background-color: #FFFFFF;
     border-radius: 2px;
-    -webkit-box-shadow: 
-        0px 3px 1px -2px rgba(0, 0, 0, 0.2), 
-        0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
+    -webkit-box-shadow:
+        0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0px 2px 2px 0px rgba(0, 0, 0, 0.14),
         0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-    box-shadow: 
-        0px 3px 1px -2px rgba(0, 0, 0, 0.2), 
-        0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
+    box-shadow:
+        0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0px 2px 2px 0px rgba(0, 0, 0, 0.14),
         0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-    
+
     padding: 12px;
     margin: 8px 0px;
+
     @media only screen and (max-device-width: 768px) {
         padding: 4px;
         margin: 8px 0px;
+
         small {
             font-size: 16px;
         }
     }
+
     @media (prefers-color-scheme: dark) {
         background-color: $surface-color-dark;
     }
+
     h1 {
         &.card-header {
             padding: 16px 20px 0px 20px;
             font-family: Roboto Mono, monospace;
+
             @media (prefers-color-scheme: dark) {
                 small {
                     color: #FFFFFF;
@@ -181,6 +210,7 @@ a {
             }
         }
     }
+
     h3 {
         font-family: Roboto Mono, monospace;
     }
@@ -192,10 +222,12 @@ div {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
+
         >.workHistIcon {
             font-size: 35px;
             margin: 4px 8px;
         }
+
         >.skillIcon {
             font-size: 50px;
             margin: 4px 16px;
@@ -204,10 +236,11 @@ div {
 }
 
 .profile_pic {
-  	border-radius: 150px;
+    border-radius: 150px;
     margin: 20px;
     width: 200px;
     height: 200px;
+
     @media only screen and (max-device-width: 768px) {
         width: 100px;
         height: 100px;
@@ -216,18 +249,23 @@ div {
 }
 
 .profile_card {
-  	margin: 20px 0px;
+    margin: 20px 0px;
+
     h1 {
         font-size: 50px;
     }
+
     p {
         font-size: 16px;
     }
+
     @media only screen and (max-device-width: 768px) {
         margin: 12px 0px;
+
         h1 {
             font-size: 30px;
         }
+
         p {
             font-size: 12px;
         }
@@ -243,6 +281,7 @@ div {
         padding: 16px 20px 0px 20px;
         font-family: Roboto Mono, monospace;
     }
+
     i {
         margin: 0px 16px;
         font-size: 35px;
@@ -250,8 +289,8 @@ div {
 }
 
 .classes {
-    background-color:#ffffff;
-    color:#000000;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .containclasses {
@@ -274,13 +313,15 @@ div {
 }
 
 .bg-1 {
-    color: #ffffff; /* White */
-    text-shadow: 2px 2px 4px #000000; /*Black shadow*/
+    color: #ffffff;
+    /* White */
+    text-shadow: 2px 2px 4px #000000;
+    /*Black shadow*/
 }
 
 .bg-2 {
-    background-color:#ffffff;
-    color:#000000;
+    background-color: #ffffff;
+    color: #000000;
     border-radius: 0px 0px 5px 5px;
 }
 
@@ -292,7 +333,8 @@ div {
     padding: 12px 20px;
     margin: 8px auto 0px auto;
     border-radius: 0px 2px 0px 2px;
-    .col-xs-6{
+
+    .col-xs-6 {
         padding: 0px;
     }
 }
@@ -304,30 +346,37 @@ div {
 }
 
 /*div Styles*/
-div	{
-  	&.box {
-        background-color:#000000; 
-        color:#ffffff; 
-        width:60%; 
-        margin:0 auto; 
-        padding:20px;
-        opacity:0.9;
+div {
+    &.box {
+        background-color: #000000;
+        color: #ffffff;
+        width: 60%;
+        margin: 0 auto;
+        padding: 20px;
+        opacity: 0.9;
     }
+
     &.mid {
-        width:60%; 
-        margin:0 auto;
+        width: 60%;
+        margin: 0 auto;
     }
 }
 
 /*Unordered List*/
 ul {
-  	&.a{
+    &.a {
         list-style-type: square;
     }
 }
 
 @media (prefers-color-scheme: dark) {
-    .devicon-apple-original, .devicon-apple-plain, .devicon-github-original-wordmark, .devicon-github-plain-wordmark, .devicon-github-original, .devicon-github-plain{
+
+    .devicon-apple-original,
+    .devicon-apple-plain,
+    .devicon-github-original-wordmark,
+    .devicon-github-plain-wordmark,
+    .devicon-github-original,
+    .devicon-github-plain {
         &.colored {
             color: #FFFFFF !important;
         }
