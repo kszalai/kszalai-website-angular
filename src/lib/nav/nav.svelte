@@ -1,8 +1,4 @@
 <script lang="ts">
-  import NavLink from "./nav-link.svelte";
-  import NavDropdown from "./nav-dropdown.svelte";
-  import NavHeader from "./nav-header.svelte";
-  import NavInternalLink from "./nav-internal-link.svelte";
   import NavExpandButton from "./nav-expand-button.svelte";
   import NavLogo from "./nav-logo.svelte";
   import NavMobileMenu from "./nav-mobile-menu.svelte";
@@ -10,12 +6,6 @@
   import { NavDropdownMenu, NavMenu, type NavMenuItem } from "./nav-menu";
 
   let menu = new NavMenu();
-
-  let menuOpen = {
-    main: false,
-    universityWork: false,
-  };
-  $: menuOpenClass = menuOpen.main ? "flex" : "hidden";
 
   function onMainMenuClick(): void {
     menu.open = !menu.open;
@@ -37,8 +27,8 @@
   }
 
   function closeEntireMenu(): void {
-    menuOpen.main = false;
-    menuOpen.universityWork = false;
+    // menuOpen.main = false;
+    // menuOpen.universityWork = false;
   }
 
   export let onNavigate: Function;
