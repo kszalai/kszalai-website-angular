@@ -1,14 +1,23 @@
 <script lang="ts">
-    export let menuOpen = false;
-    $: menuOpenClass = menuOpen ? "dropdown open" : "dropdown";
+    import { NavMenuLink, NavExternalMenuLink, type NavMenuItem, type NavDropdownMenu } from "./nav-menu";
+    import NavInternalLink from "./nav-internal-link.svelte";
+    import NavLink from "./nav-link.svelte";
 
-    export let iconClass: string;
-    export let name: string;
+    export let menu: NavDropdownMenu;
+    $: menuOpenClass = menu.open ? "flex" : "hidden";
+    
+    export let onInternalLinkClick: (e: NavMenuItem) => void;
 </script>
 
 <li class={menuOpenClass}>
-    <a href="#" on:click class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class={iconClass}></i>&nbsp;{name}<span class="caret"></span></a>
+    <a href="#" on:click><i class={menu.iconClass}></i>&nbsp;{menu.name}</a>
     <ul class="dropdown-menu">
-        <slot></slot>
+        {#each menu.links as link}
+            {#if link instanceof NavMenuLink}
+                <NavInternalLink {link} on:click={() => {onInternalLinkClick(link)}} />
+            {:else if link instanceof NavExternalMenuLink}
+                <NavLink name={link.name} hrefLink={link.hrefLink} />
+            {/if}
+        {/each}
     </ul>
 </li>

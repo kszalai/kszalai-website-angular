@@ -1,7 +1,10 @@
-@import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
 @import "~devicon/devicon.min.css";
 @import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 $primaryColor: #2162FF;
 $primaryColorLight: #768FFF;
@@ -24,7 +27,18 @@ $theme-color: #212121;
 $theme-color_dark: #000000;
 $font-stack: "Roboto", Arial, Helvetica, sans-serif;
 
-body {
+@layer components {
+
+    .nav-link {
+        @apply relative flex flex-row  flex-nowrap justify-start 
+             text-gray-300
+             hover:bg-gray-900 hover:text-white 
+             px-3 py-2 rounded-md text-sm font-medium;
+    }
+
+}
+
+/* body {
     background: $background-color;
     font-family: $font-stack;
     color: #000000;
@@ -48,31 +62,26 @@ h2.a {
     font-family: $font-stack;
 }
 
-/*Links*/
 a {
     &:link {
-        /*Unvisited Link*/
         color: #2196f3;
         background-color: transparent;
         text-decoration: none;
     }
 
     &:visited {
-        /*Visited Link*/
         color: #0a6ebd;
         background-color: transparent;
         text-decoration: none;
     }
 
     &:hover {
-        /*Mouse over link*/
         color: #0a6ebd;
         background-color: transparent;
         text-decoration: underline;
     }
 
     &:active {
-        /*Selected Link*/
         color: #0a6ebd;
         background-color: transparent;
         text-decoration: underline;
@@ -314,9 +323,7 @@ div {
 
 .bg-1 {
     color: #ffffff;
-    /* White */
     text-shadow: 2px 2px 4px #000000;
-    /*Black shadow*/
 }
 
 .bg-2 {
@@ -345,7 +352,6 @@ div {
     }
 }
 
-/*div Styles*/
 div {
     &.box {
         background-color: #000000;
@@ -362,7 +368,6 @@ div {
     }
 }
 
-/*Unordered List*/
 ul {
     &.a {
         list-style-type: square;
@@ -381,4 +386,4 @@ ul {
             color: #FFFFFF !important;
         }
     }
-}
+} */

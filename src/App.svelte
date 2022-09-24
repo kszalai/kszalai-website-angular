@@ -15,7 +15,7 @@
 
 <Nav onNavigate={onNavigate} />
 
-<InfoHeader />
+<!-- <InfoHeader />
 
 {#if currentPage == "home"}
 <Home />
@@ -25,4 +25,4 @@
 <WebProgramming />
 {/if}
 
-<Footer />
+<Footer /> -->

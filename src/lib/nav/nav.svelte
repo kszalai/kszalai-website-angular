@@ -1,54 +1,59 @@
 <script lang="ts">
-    import NavLink from "./nav-link.svelte";
-    import NavDropdown from "./nav-dropdown.svelte";
-    import NavHeader from "./nav-header.svelte";
-    import NavInternalLink from "./nav-internal-link.svelte";
+  import NavLink from "./nav-link.svelte";
+  import NavDropdown from "./nav-dropdown.svelte";
+  import NavHeader from "./nav-header.svelte";
+  import NavInternalLink from "./nav-internal-link.svelte";
+  import NavExpandButton from "./nav-expand-button.svelte";
+  import NavLogo from "./nav-logo.svelte";
+  import NavMobileMenu from "./nav-mobile-menu.svelte";
+  import NavMainMenu from "./nav-main-menu.svelte";
+  import { NavDropdownMenu, NavMenu, type NavMenuItem } from "./nav-menu";
 
-    let menuOpen = {
-        main: false,
-        universityWork: false
-    };
-    $: menuOpenClass = menuOpen.main ? "navbar-collapse collapse in" : "navbar-collapse collapse";
+  let menu = new NavMenu();
 
-    function onMainMenuClick(): void {
-        menuOpen.main = !menuOpen.main;
-    }
+  let menuOpen = {
+    main: false,
+    universityWork: false,
+  };
+  $: menuOpenClass = menuOpen.main ? "flex" : "hidden";
 
-    function onHomeClick(): void {
-        closeEntireMenu();
-        onNavigate("home");
-    }
+  function onMainMenuClick(): void {
+    menu.open = !menu.open;
+  }
 
-    function onUniversityWorkMenuClick(): void {
-        menuOpen.universityWork = !menuOpen.universityWork;
-    }
+  function onSubMenuClick(submenu: NavDropdownMenu) {
+    submenu.open = !submenu.open;
+  }
 
-    function onUniversityWorkLinkClick(route: string): void {
-        closeEntireMenu();
-        onNavigate(route);
-    }
+  function onInternalLinkClick(link: NavMenuItem) {
+    closeEntireMenu();
+    console.log(link);
+    // onNavigate(link.id);
+  }
 
-    function closeEntireMenu(): void {
-        menuOpen.main = false;
-        menuOpen.universityWork = false;
-    }
+  function onHomeClick(): void {
+    closeEntireMenu();
+    onNavigate("home");
+  }
 
-    export let onNavigate: Function;
+  function closeEntireMenu(): void {
+    menuOpen.main = false;
+    menuOpen.universityWork = false;
+  }
+
+  export let onNavigate: Function;
 </script>
 
-<nav class="navbar navbar-default navbar-fixed-top" data-spy="affix-top">
-    <div class="container-fluid">
-        <NavHeader on:click={onMainMenuClick} />
-        <div class={menuOpenClass} id="myNavbar">
-            <ul class="nav navbar-nav">
-                <NavInternalLink on:click={onHomeClick} name="Home" iconClass="fa fa-home fa-fw" />
-                <NavDropdown on:click={onUniversityWorkMenuClick} menuOpen={menuOpen.universityWork} name="University Work" iconClass="fa fa-graduation-cap fa-fw">
-                    <NavInternalLink on:click={() => onUniversityWorkLinkClick("database-principles")} name="Database Principles" />
-                    <NavInternalLink on:click={() => onUniversityWorkLinkClick("web-programming")} name="Internet Based Computing" />
-                    <!-- <NavLink name="Past Classes" hrefLink="/pastClasses.html" /> -->
-                </NavDropdown>
-                <NavLink name="Contact" hrefLink="mailto:kyleszalai@gmail.com" iconClass="fa fa-envelope-o fa-fw" />
-            </ul>
-        </div>
+<nav class="bg-blue-300 dark:bg-blue-800 text-black dark:text-white top-0 shadow-lg">
+  <div class="mx-auto max-w-7xl px-4">
+    <div class="flex justify-between items-center">
+      <NavLogo on:click={onHomeClick} />
+
+      <NavMainMenu {menu} {onSubMenuClick} {onInternalLinkClick} />
+
+      <NavExpandButton mobileMenuOpen={menu.open} on:click={onMainMenuClick} />
     </div>
+  </div>
+
+  <NavMobileMenu {menu} />
 </nav>

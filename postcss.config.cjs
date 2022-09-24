@@ -1,9 +1,11 @@
 module.exports = {
-  plugins: [
-    require('autoprefixer'),
-    require('postcss-nested'),
-    require('postcss-preset-env'),
-    require('postcss-simple-vars'),
-    require('cssnano')
-  ]
+  plugins: {
+    'autoprefixer': {},
+    'tailwindcss/nesting': 'postcss-nested',
+    'tailwindcss': {},
+    'postcss-preset-env': {},
+    'postcss-simple-vars': {},
+    'cssnano': {},
+    'postcss-import': {}
+  }
 }
