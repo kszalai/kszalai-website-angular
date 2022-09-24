@@ -1,10 +1,9 @@
 <script lang="ts">
-  export let hrefLink: string = "";
-  export let title: string = "";
-  export let iconClass: string = "";
-  export let name: string = "";
+  import type { NavMenuLink } from "./nav-menu";
+
+  export let link: NavMenuLink;
 </script>
 
-<div on:click href={hrefLink} {title} class="nav-link" aria-current="page">
-  <i class={iconClass} />&nbsp;{name}
-</div>
+<a on:click href="{link.href}" title={link.title} class="nav-link" aria-current="page">
+  <i class={link.iconClass} />&nbsp;{link.name}
+</a>

@@ -1,5 +1,7 @@
 <script lang="ts">
-    export let title: string;
+    import type { NavMenuLink } from "./nav-menu";
+
+    export let link: NavMenuLink;
 </script>
 
-<a href="#" class="block py-2 px-4 text-sm hover:bg-blue-500 hover:dark:bg-blue-600 transition duration-300">{title}</a>
+<a href="#" on:click class="nav-mobile-link">{link.name}</a>
