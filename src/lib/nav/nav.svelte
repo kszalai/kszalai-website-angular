@@ -1,7 +1,7 @@
 <script lang="ts">
-  import NavExpandButton from "./nav-expand-button.svelte";
+  import NavExpandButton from "./mobile/nav-expand-button.svelte";
   import NavLogo from "./nav-logo.svelte";
-  import NavMobileMenu from "./nav-mobile-menu.svelte";
+  import NavMobileMenu from "./mobile/nav-mobile-menu.svelte";
   import NavMainMenu from "./nav-main-menu.svelte";
   import { NavDropdownMenu, NavMenu, NavMenuLink } from "./nav-menu";
 

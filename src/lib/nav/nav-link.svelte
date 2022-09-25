@@ -5,5 +5,5 @@
 </script>
 
 <a on:click href="{link.href}" title={link.title} class="nav-link" aria-current="page">
-  <i class={link.iconClass} />&nbsp;{link.name}
+  <i class={link.iconClass} />{link.name}
 </a>

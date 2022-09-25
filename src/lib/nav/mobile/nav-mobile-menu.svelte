@@ -1,6 +1,6 @@
 <script lang="ts">
     import NavMobileLink from "./nav-mobile-link.svelte";
-    import { type NavMenuItem, NavDropdownMenu, type NavMenu, NavMenuLink } from "./nav-menu";
+    import { type NavMenuItem, NavDropdownMenu, type NavMenu, NavMenuLink } from "../nav-menu";
   import NavMobileDropdown from "./nav-mobile-dropdown.svelte";
 
     export let menu: NavMenu;

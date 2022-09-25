@@ -5,13 +5,14 @@ export class NavMenu {
     constructor() {
         this.links = Array<NavMenuItem>(
             new NavMenuLink(0, "#", "", "", "Home", "home"),
-            new NavDropdownMenu(1, "#", "", "University Work",
+            new NavMenuLink(1, "#", "", "", "Blog", "blog"),
+            new NavDropdownMenu(2, "#", "", "University Work",
                 Array(
                     new NavMenuLink(0, "#", "", "", "Database Principles", "database-principles"),
                     new NavMenuLink(1, "#", "", "", "Web Programming", "web-programming")
                 )
             ),
-            new NavMenuLink(2, "mailto:kyleszalai@gmail.com", "", "", "Contact", null)
+            new NavMenuLink(3, "mailto:kyleszalai@gmail.com", "", "", "Contact", null)
         );
         this.open = false;
     }

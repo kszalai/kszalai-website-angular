@@ -9,8 +9,8 @@
 </script>
 
 <li class="list-none">
-    <a href="#" class="nav-link" on:click><i class={menu.iconClass}></i>&nbsp;{menu.name}</a>
-    <ul class="absolute left-11 {menuOpenClass} flex-col bg-blue-400 dark:bg-blue-700 rounded">
+    <a href="#" class="nav-link" on:click><i class={menu.iconClass}></i>{menu.name}</a>
+    <ul class="absolute left-24 {menuOpenClass} flex-col bg-blue-400 dark:bg-blue-700 rounded">
         {#each menu.links as link}
             {#if link instanceof NavMenuLink}
                 <NavLink {link} on:click={() => {onLinkClick(link)}} />
