@@ -5,6 +5,7 @@
   import Nav from './lib/nav/nav.svelte';
   import DatabasePrinciples from './lib/pages/database-principles.svelte';
   import WebProgramming from './lib/pages/web-programming.svelte';
+  import Intro from './lib/pages/home/intro.svelte';
 
   let currentPage: string = "home";
 
@@ -14,6 +15,8 @@
 </script>
 
 <Nav onNavigate={onNavigate} />
+
+<Intro />
 
 <!-- <InfoHeader />
 

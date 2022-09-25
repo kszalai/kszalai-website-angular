@@ -41,7 +41,7 @@
   export let onNavigate: Function;
 </script>
 
-<nav class="bg-blue-300 dark:bg-blue-800 text-black dark:text-white top-0 shadow-lg">
+<nav class="bg-blue-300 dark:bg-blue-800 text-black dark:text-white top-0 shadow-lg sticky">
   <div class="mx-auto max-w-7xl px-4">
     <div class="flex justify-between items-center">
       <NavLogo on:click={onHomeClick} />
