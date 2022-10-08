@@ -2,7 +2,7 @@
     import profilePic from '../../../assets/profile_pic.jpg';
 </script>
 
-<div class="w-full h-screen flex items-center justify-center">
+<div class="w-full h-screen-adjusted flex items-center justify-center">
     <div class="max-w-7xl mx-auto">
         <div class="flex flex-col justify-around items-start">
             <div class="flex items-center my-8">

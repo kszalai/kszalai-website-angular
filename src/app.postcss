@@ -33,6 +33,7 @@ $font-stack: "Roboto", Arial, Helvetica, sans-serif;
         @apply relative flex flex-row flex-nowrap justify-start 
              text-white
              hover:bg-blue-500 hover:dark:bg-blue-600
+             transition-colors
              px-3 py-2 rounded-md text-sm font-medium;
     }
 
@@ -40,6 +41,7 @@ $font-stack: "Roboto", Arial, Helvetica, sans-serif;
         @apply block py-2 px-4 
                text-sm
                hover:bg-blue-500 hover:dark:bg-blue-600
+               transition-colors
                transition duration-300;
     }
 
@@ -47,6 +49,10 @@ $font-stack: "Roboto", Arial, Helvetica, sans-serif;
         @apply rounded-full h-48 w-48;
     }
 
+
+    .h-screen-adjusted {
+        height: calc(100vh - 4rem);
+    }
 }
 
 /* body {

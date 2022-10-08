@@ -6,6 +6,7 @@
   import DatabasePrinciples from './lib/pages/database-principles.svelte';
   import WebProgramming from './lib/pages/web-programming.svelte';
   import Intro from './lib/pages/home/intro.svelte';
+  import Experience from './lib/pages/home/experience.svelte';
 
   let currentPage: string = "home";
 
@@ -17,6 +18,7 @@
 <Nav onNavigate={onNavigate} />
 
 <Intro />
+<Experience />
 
 <!-- <InfoHeader />
 
